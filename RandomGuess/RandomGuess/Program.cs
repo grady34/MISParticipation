@@ -12,14 +12,30 @@ namespace RandomGuess
             string lowlimit;
             string uplimit;
             string guess;
+            int lowint;
+            int upint;
 
             Console.WriteLine("What would you like the lower limit to be? >>");
             lowlimit = Console.ReadLine();
-            int lowint = Convert.ToInt32(lowlimit);
+            
+            //Check if the input in an integer
+
+            while (int.TryParse(lowlimit, out lowint) == false)
+            {
+                Console.WriteLine("Incorrect value.  Your lower limit must be an integer >>");
+                lowlimit = Console.ReadLine();
+            }
 
             Console.WriteLine("What would you like the upper limit to be? >>");
             uplimit = Console.ReadLine();
-            int upint = Convert.ToInt32(uplimit);
+            
+            //check if the input is an integer
+
+            while (int.TryParse(uplimit, out upint) == false)
+            {
+                Console.WriteLine("Incorrect value.  Your upper limit must be an integer >>");
+                uplimit = Console.ReadLine();
+            }
 
             Random rand = new Random();
             int randomNbr = rand.Next(lowint, upint + 1);
@@ -30,6 +46,7 @@ namespace RandomGuess
             {
                 Console.WriteLine("Guess a number between your lower and upper limit. >>");
                 guess = Console.ReadLine();
+                //check if the input is an integer
                 while (int.TryParse(guess, out numguess) == false)
                 {
                     Console.WriteLine("Incorrect value.  Your guess must be an integer >>");
