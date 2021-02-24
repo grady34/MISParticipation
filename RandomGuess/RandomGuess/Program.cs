@@ -24,22 +24,26 @@ namespace RandomGuess
             Random rand = new Random();
             int randomNbr = rand.Next(lowint, upint + 1);
 
-            Console.WriteLine("Guess a number between your lower and upper limit. >>");
-            guess = Console.ReadLine();
-
             int numguess;
 
-            while (int.TryParse(guess, out numguess) == false)
+            do
             {
-                Console.WriteLine("Incorrect value.  Your guess must be an integer >>");
+                Console.WriteLine("Guess a number between your lower and upper limit. >>");
                 guess = Console.ReadLine();
-            }
-
-
-
-            // need to make sure they only enter a number tryparse
-            // need to make a do while loop so if they guess wrong they can try again and again until they guess correct
-
+                while (int.TryParse(guess, out numguess) == false)
+                {
+                    Console.WriteLine("Incorrect value.  Your guess must be an integer >>");
+                    guess = Console.ReadLine();
+                }
+                if (numguess == randomNbr)
+                {
+                    Console.WriteLine("You guessed correctly! Good Job!");
+                }
+                else
+                {
+                    Console.WriteLine("You guessed incorrectly try again.");
+                }
+            } while (numguess != randomNbr);
 
 
         }
