@@ -18,6 +18,7 @@ namespace StringManipulation
 
             bool contains = statement.Contains(word);
 
+
             if (contains)
             {
                 Console.WriteLine(statement.Replace(word, newword));
@@ -25,10 +26,11 @@ namespace StringManipulation
             else
             {
                 Console.WriteLine("Sorry, I could not find your word " + word + ".");
-            }
-            for (int i = word.Length; i > 0; i--)
-            {
-                Console.WriteLine(i);
+                for (int i = 0; i < word.Length; i++)
+                {
+                    Console.Write(word[word.Length - (1 + i)]);
+                }  
+
             }
         }
     }
