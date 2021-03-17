@@ -10,6 +10,7 @@ namespace ConsoleApp1
             Console.WriteLine("How many exam scores do you have?");
             int numofscores = Convert.ToInt32(Console.ReadLine());
             List<double> scores = new List<double>();
+            Dictionary<int, double> dictscores = new Dictionary<int, double>();
             double average = 0;
             double min = 0;
             double max = 0;
@@ -20,6 +21,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Enter an exam score.");
                 double examscores = Convert.ToDouble(Console.ReadLine());
                 scores.Add(examscores);
+                dictscores.Add(i, examscores);
             }
 
             for (int i = 1; i < numofscores; i++)
@@ -34,6 +36,7 @@ namespace ConsoleApp1
                 {
                     max = scores[i];
                 }
+                
                 
                 
 
