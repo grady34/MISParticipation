@@ -6,7 +6,7 @@ namespace Process_CSV
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
