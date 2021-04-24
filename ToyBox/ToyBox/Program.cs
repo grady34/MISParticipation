@@ -6,7 +6,7 @@ namespace ToyBox
     {
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("Enter the name of the toybox");
         }
     }
 }
