@@ -6,4 +6,10 @@
     <RootNamespace>Classes___Cereal</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="Cereal_Data.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

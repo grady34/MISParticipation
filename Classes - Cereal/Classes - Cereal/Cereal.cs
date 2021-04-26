@@ -24,6 +24,10 @@ namespace Classes___Cereal
 
         }
 
+        public override string ToString()
+        {
+            return $"{Name} made by {Manufacturer} has a serving size of {Cups.ToString("N1")} cups and has {Calories.ToString("N2")} calories.";
+        }
 
     }
 }
