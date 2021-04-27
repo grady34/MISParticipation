@@ -34,10 +34,20 @@ namespace Classes___Cereal
 
                 bowls.Add(c);
 
+                Console.WriteLine(c.ToString());
+
+
             }
 
+            Console.WriteLine($"\nOut of the cereals listed. The ones below have a serving of one cup or more and 100 or less calories per serving.\n");
 
-
+            foreach (Cereal cereal in bowls)
+            {
+                if (cereal.Cups >= 1 || cereal.Calories <= 100)
+                {
+                    Console.WriteLine(cereal.Name);
+                }
+            }
 
         }
     }
